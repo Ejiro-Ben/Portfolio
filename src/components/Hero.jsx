@@ -21,7 +21,7 @@ export const Hero = ({ onViewPortfolio }) => {
         <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight animate-[slideUp_0.8s_ease-out_0.2s_both]">
           Design & Development Excellence
         </h1>
-        <p className="text-xl md:text-2xl font-light mb-6 md:mb-8 opacity-90 animate-[slideUp_0.8s_ease-out_0.4s_both]">
+        <p className="text-xl md:text-2xl font-light mb-20 md:mb-8 opacity-90 animate-[slideUp_0.8s_ease-out_0.4s_both]">
           Graphic Design & Web Development Solutions
         </p>
         <button 
