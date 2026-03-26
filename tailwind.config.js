@@ -7,23 +7,49 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f0f4ff',
-          100: '#e0e9ff',
-          500: '#667eea',
-          600: '#5568d3',
-          700: '#4c63c4',
+        gold: {
+          50: '#fffbf0',
+          100: '#fef5e7',
+          200: '#fde8c8',
+          300: '#fdd9a3',
+          400: '#f5c56a',
+          500: '#d4af37',
+          600: '#c9a633',
+          700: '#9e8629',
+          800: '#73651f',
+          900: '#574c15',
         },
-        secondary: {
-          500: '#764ba2',
-          600: '#6d4399',
-          700: '#5f3a8a',
+        dark: {
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
+          950: '#030712',
         },
-        accent: '#e74c3c',
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'gradient-light': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)',
+        'gradient-gold-accent': 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(30px)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+        slideUp: 'slideUp 0.8s ease-out forwards',
+      },
+      animationDelay: {
+        '1000': '1s',
+        '2000': '2s',
+        '3000': '3s',
       },
     },
   },

@@ -1,80 +1,34 @@
-import { useState } from 'react';
-import '../styles/Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const { name, email, subject, message } = formData;
-    const mailtoLink = `mailto:ejiroghenebenodiri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-    
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
-
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle">Have a project in mind? Let's work together!</p>
+    <section id="contact" className="py-20 md:py-32 px-4 md:px-8 bg-gradient-to-r from-black via-gray-900 to-gray-950 text-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 text-gold-400">Let&apos;s Work Together</h2>
+        <p className="text-xl opacity-90 mb-12">Have a graphic design or web development project? I&apos;d love to help bring your ideas to life!</p>
 
-        <div className="contact-content">
-          <div className="contact-info">
-            <div className="info-item">
-              <h3>Email</h3>
-              <p><a href="mailto:ejiroghenebenodiri@gmail.com">ejiroghenebenodiri@gmail.com</a></p>
-            </div>
-            <div className="info-item">
-              <h3>Phone</h3>
-              <p><a href="tel:+234 701 643 1294">+234 701 643 1294</a></p>
-            </div>
-            <div className="info-item">
-              <h3>Location</h3>
-              <p>Ilorin, Kwara State, Nigeria</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a
+            href="mailto:ejiroghenebenodiri@gmail.com"
+            className="flex flex-col items-center gap-3 rounded-xl border border-gray-700 px-6 py-8 hover:border-gold-400 transition-all"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="text-5xl text-gold-400" />
+            <span className="text-xl font-semibold">Email</span>
+            <span className="opacity-90">ejiroghenebenodiri@gmail.com</span>
+          </a>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name *</label>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email *</label>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message *</label>
-              <textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} required></textarea>
-            </div>
-            <button type="submit" className="submit-btn">Send Message</button>
-          </form>
+          <a
+            href="https://wa.me/2347016431294"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-3 rounded-xl border border-gray-700 px-6 py-8 hover:border-green-500 transition-all"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} className="text-5xl text-green-400" />
+            <span className="text-xl font-semibold">WhatsApp</span>
+            <span className="opacity-90">+234 701 643 1294</span>
+          </a>
         </div>
       </div>
     </section>
