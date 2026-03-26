@@ -17,7 +17,7 @@ export const Hero = ({ onViewPortfolio }) => {
         <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full -top-24 -right-24 animate-[float_6s_ease-in-out_infinite] blur-3xl"></div>
         <div className="absolute w-80 h-80 bg-white opacity-10 rounded-full -bottom-12 -left-12 animate-[float_8s_ease-in-out_infinite_reverse] blur-3xl"></div>
       </div>
-      <div className="relative z-10 text-center text-white max-w-4xl px-8 py-8">
+      <div className="relative z-10 text-center text-white max-w-6xl px-8 py-8">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight animate-[slideUp_0.8s_ease-out_0.2s_both]">
           Design & Development Excellence
         </h1>
