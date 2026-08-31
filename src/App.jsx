@@ -24,8 +24,8 @@ function App() {
         <>
           <Header />
           <Hero onViewPortfolio={handleViewAll} />
-          <Portfolio onViewAll={handleViewAll} />
           <About />
+          <Portfolio onViewAll={handleViewAll} />
           <Contact />
           <Footer />
         </>
